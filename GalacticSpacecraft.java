@@ -1,13 +1,13 @@
-public class GalacticSpacecraft {
+public class GalacticSpacecraft { //Main Class name with GalacticSpacecraft
     private int[] position;
     private String direction;
 
-    public GalacticSpacecraft(int[] initialPosition, String initialDirection) {
+    public GalacticSpacecraft(int[] initialPosition, String initialDirection) { //Constructor
         position = initialPosition;
         direction = initialDirection;
     }
 
-    public void moveForward() {
+    public void moveForward() { // Move Forward according to command
         if (direction.equals("N")) {
             position[1]++;
         } else if (direction.equals("S")) {
@@ -22,7 +22,7 @@ public class GalacticSpacecraft {
             position[2]--;
         }
     }
-    public void moveBackward() {
+    public void moveBackward() { // Move Backward according to command
         if (direction.equals("N")) {
             position[1]--;
         } else if (direction.equals("S")) {
@@ -38,7 +38,7 @@ public class GalacticSpacecraft {
         }
     }
 
-    public void turnLeft() {
+    public void turnLeft() { // Move TurnLeft
         if (direction.equals("N")) {
             direction = "W";
         } else if (direction.equals("S")) {
@@ -50,7 +50,7 @@ public class GalacticSpacecraft {
         }
     }
 
-    public void turnRight() {
+    public void turnRight() {  // Move TurnLeft
         if (direction.equals("N")) {
             direction = "E";
         } else if (direction.equals("S")) {
@@ -62,7 +62,7 @@ public class GalacticSpacecraft {
         }
     }
 
-    public void turnUp() {
+    public void turnUp() {  // Move TurnUp
         if (direction.equals("N")) {
             direction = "Up";
         } else if (direction.equals("S")) {
@@ -72,7 +72,7 @@ public class GalacticSpacecraft {
         }
     }
 
-    public void turnDown() {
+    public void turnDown() {  // Move TurnDown
         if (direction.equals("N")) {
             direction = "Down";
         } else if (direction.equals("S")) {
@@ -84,7 +84,7 @@ public class GalacticSpacecraft {
 
     public static void executeCommands(String[] commands, GalacticSpacecraft spacecraft) {
         for (String command : commands) {
-            switch (command) {
+            switch (command) { // Switch case to use to select many Options
                 case "f":
                     spacecraft.moveForward();
                     break;
@@ -110,7 +110,7 @@ public class GalacticSpacecraft {
     public static void main(String[] args) {
         int[] initialPosition = {0, 0, 0};
         String initialDirection = "N";
-        String[] commands = {"f", "r", "u", "b", "l"};
+        String[] commands = {"f", "r", "u", "b", "l"}; //Move forward,right,left,down,bottom,up
 
         GalacticSpacecraft spacecraft = new GalacticSpacecraft(initialPosition, initialDirection);
         executeCommands(commands, spacecraft);
