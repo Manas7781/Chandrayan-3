@@ -1,4 +1,4 @@
-public class GalacticSpacecraft { //Main Class name with GalacticSpacecraft
+public class GalacticSpacecraft { //Main Class name with GalacticSpacecraft ..
     private int[] position;
     private String direction;
 
